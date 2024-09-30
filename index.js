@@ -18,7 +18,6 @@ tabs.forEach((tab) => {
 });
 
 document.querySelectorAll("table.interactive").forEach((element) => {
-  console.log(element);
   element.addEventListener("click", (event) => {
     const row =
       event.target.parentElement.tagName === "TR"

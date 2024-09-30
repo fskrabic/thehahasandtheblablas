@@ -17,5 +17,8 @@
     "zagreb"
   ],
   "author": "fs",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "98.css": "^0.1.20"
+  }
 }
