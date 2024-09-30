@@ -115,7 +115,7 @@ form div.field-row-stacked:last-of-type {
 }
 
 .sunken-panel {
-  width: 35vw;
+  width: 30vw;
   height: 45vh;
 }
 table.interactive {
@@ -125,6 +125,7 @@ table.interactive {
 .gig-tables {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 1rem;
 }
 #gigs h4 {
@@ -132,10 +133,10 @@ table.interactive {
   font-size: 15px;
 }
 h4.past {
-  left: 17%;
+  left: 25%;
 }
 h4.future {
-  left: 64%;
+  left: 67%;
 }
 tr {
   width: 100%;
