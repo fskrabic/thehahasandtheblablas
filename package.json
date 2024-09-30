@@ -1,0 +1,21 @@
+{
+  "name": "hahasblablas",
+  "version": "1.0.0",
+  "description": "website for The Hahas and The Blablas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "band",
+    "synth",
+    "punk",
+    "pop",
+    "power",
+    "egg",
+    "weird",
+    "zagreb"
+  ],
+  "author": "fs",
+  "license": "ISC"
+}

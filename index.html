@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+    <title>haha blabla</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="title-bar">
+        <div class="title-bar-text">THE HAHAS AND THE BLABLAS</div>
+        <div class="title-bar-controls">
+          <button aria-label="Help"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <menu class="tablist" role="tablist">
+          <li class="tab" role="tab" aria-selected="true" data-tab="home">
+            <a href="#home">Home</a>
+          </li>
+          <li class="tab" role="tab" data-tab="music">
+            <a href="#music">Music</a>
+          </li>
+          <li class="tab" role="tab" data-tab="lyrics">
+            <a href="#lyrics">Lyrics</a>
+          </li>
+          <li class="tab" role="tab" data-tab="gigs">
+            <a href="#gigs">Gigs</a>
+          </li>
+          <li class="tab" role="tab" data-tab="contact">
+            <a href="#contact">Contact</a>
+          </li>
+        </menu>
+
+        <div class="window" role="tabpanel">
+          <div id="home" class="tab-content">
+            <h1>THE HAHAS AND THE BLABLAS</h1>
+            <h3>
+              We're a synth-punk-o-pop band from Zagreb, Croatia playing weird
+              music for weird people since 2021.
+            </h3>
+            <div class="hover-container">
+              <h4 class="haha">
+                This is our website. If you hover this text, our photo will
+                appear.
+              </h4>
+              <img src="hahasi.jpg" alt="Haha Blabla" class="hover-image" />
+            </div>
+            <h5>woof</h5>
+          </div>
+          <div id="music" class="tab-content" style="display: none">
+            <h2>Our debut album is coming soon!</h2>
+            <p>meanwhile, check out our video singles!</p>
+            <div class="video-buttons">
+              <button onclick="changeVideo('OS9Vn-0p6lY')">ANDY KAUFMAN IS NOT MY DAD!</button>
+              <button onclick="changeVideo('gJHJ8vIXUSw')">BARK!</button>
+              <button onclick="changeVideo('cH56Iejf2PA')">BUREAUCRACY</button>
+              <button onclick="changeVideo('G83cJHNQFIQ')">FIX IT IN THE MIX</button>
+            </div>
+            <iframe id="videoFrame" src="https://www.youtube.com/embed/OS9Vn-0p6lY"></iframe>
+            
+          </div>
+          <div id="lyrics" class="tab-content" style="display: none">
+            <h1>LYRICS</h1>
+            <h3>
+              lyrics lyrics lyrics lyrics lyrics lyrics lyrics lyrics lyrics
+            </h3>
+          </div>
+          <div id="gigs" class="tab-content" style="display: none">
+            <h2>GIGS</h2>
+            <div class="titles">
+              <h4 class="past">Past</h4>
+              <h4 class="future">Future</h4>
+            </div>
+            
+            <div class="gig-tables">
+                
+              <div class="sunken-panel ">
+                <table class="interactive">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Location</th>
+                      <th>With</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>15.1.2022</td>
+                      <td>Mochvara, Zagreb</td>
+                      <td>Revirgin, Vostok</td>
+                    </tr>
+                    <tr>
+                      <td>11.5.2022</td>
+                      <td>Stara Skola, Novi Marof</td>
+                      <td>Rimojeki</td>
+                    </tr>
+                    <tr>
+                      <td>14.5.2022.</td>
+                      <td>WC@AKC Attack, Zagreb</td>
+                      <td>Nemecek, ...</td>
+                    </tr>
+                    <tr>
+                      <td>19.5.2022</td>
+                      <td>Kulturni Centar Mesnicka, Zagreb</td>
+                      <td>N/A</td>
+                    </tr>
+                    <tr>
+                      <td>7.6.2022.</td>
+                      <td>KSET, Zagreb</td>
+                      <td>Moxie 8, ...</td>
+                    </tr>
+                    <tr>
+                      <td>21.5.2022.</td>
+                      <td>Jalla Jalla AKC Metelkova, Ljubljana</td>
+                      <td>Sranje</td>
+                    </tr>
+                    <tr>
+                      <td>23.5.2022.</td>
+                      <td>Mocvara, Zagreb</td>
+                      <td>Cassels</td>
+                    </tr>
+                    <tr>
+                      <td>2.6.2022.</td>
+                      <td>Dva Osam, Zagreb</td>
+                      <td>Vostok</td>
+                    </tr>
+                    <tr>
+                      <td>30.11.2022.</td>
+                      <td>Mocvara, Zagreb</td>
+                      <td>Snuff</td>
+                    </tr>
+                    <tr>
+                      <td>23.3.2023.</td>
+                      <td>Mocvara, Zagreb</td>
+                      <td>21 Vek</td>
+                    </tr>
+                    <tr>
+                      <td>24.8.2023.</td>
+                      <td>Mocvara, Zagreb</td>
+                      <td>Cudnorede, Kabelok</td>
+                    </tr>
+                    <tr>
+                      <td>25.8.2023.</td>
+                      <td>Underground Zone, Szeged, Hungary</td>
+                      <td>Kabelok</td>
+                    </tr>
+                    <tr>
+                      <td>26.8.2023.</td>
+                      <td>Aurora, Budapest, Hungary</td>
+                      <td>Cudnorede, Kabelok</td>
+                    </tr>
+                    <tr>
+                      <td>27.8.2023.</td>
+                      <td>CK13, Novi Sad, Serbia</td>
+                      <td>Cudnorede, Tri Kapljice, Short Reports</td>
+                    </tr>
+                    <tr>
+                      <td>28.8.2023.</td>
+                      <td>Jugosped, Belgrade, Serbia</td>
+                      <td>Cudnorede, Izleti, Ubili su batlera</td>
+                    </tr>
+                    <tr>
+                      <td>29.8.2023.</td>
+                      <td>Mladost, Subotica, Serbia</td>
+                      <td>ATAR, Cudnorede</td>
+                    </tr>
+                    <tr>
+                      <td>30.8.2023.</td>
+                      <td>Ez_az, Komarno, Slovakia</td>
+                      <td>Langosking</td>
+                    </tr>
+                    <tr>
+                      <td>31.8.2023.</td>
+                      <td>Cafe Carina, Vienna, Austria</td>
+                      <td>Karli Braun, Small Hours</td>
+                    </tr>
+                    <tr>
+                      <td>1.9.2023.</td>
+                      <td>Na garazach, Bratislava, Slovakia</td>
+                      <td>Cudnorede, Diptych, Langosking, Tapes</td>
+                    </tr>
+                    <tr>
+                      <td>2.9.2023.</td>
+                      <td>FLEK Fest, Stanica, Zilina, Slovakia</td>
+                      <td>Bibione, Ctib, Pipesh</td>
+                    </tr>
+                    <tr>
+                      <td>16.9.2023.</td>
+                      <td>Zbrda Zdola festival, Bjelovar, Croatia</td>
+                      <td>Cudnorede, Donkey Hot, Them Moose Rush</td>
+                    </tr>
+                    <tr>
+                      <td>22.9.2023.</td>
+                      <td>FANI festival, Kutina, Croatia</td>
+                      <td>Frayn, Slonoff, Tacke</td>
+                    </tr>
+                    <tr>
+                      <td>3.2.2024.</td>
+                      <td>Ceski Narodni Dom, Zagreb, Croatia</td>
+                      <td>Cudnorede</td>
+                    </tr>
+                    <tr>
+                      <td>13.4.2024.</td>
+                      <td>SUB, Graz</td>
+                      <td>Ranekune</td>
+                    </tr>
+                    <tr>
+                      <td>31.8.2024.</td>
+                      <td>Mladinski Centar, Postojna, Slovenia</td>
+                      <td>NOWAVES, Rouge</td>
+                    </tr>
+                    <tr>
+                      <td>1.9.2024.</td>
+                      <td>Eksperiment@Nasip, Zagreb, Croatia</td>
+                      <td>Sumski</td>
+                    </tr>
+                    <tr>
+                      <td>27.9.2024.</td>
+                      <td>Podrum, Rijeka, Croatia</td>
+                      <td>Roto</td>
+                    </tr>
+                    <tr>
+                      <td>28.9.2024.</td>
+                      <td>MKNZ, Ilirska Bistrica, Slovenia</td>
+                      <td>Green Crack, Peskovnik</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+            </div>
+            <div class="sunken-panel ">
+              <table class="interactive">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>With</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TBA</td>
+                    <td>TBA</td>
+                    <td>TBA</td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+          </div>
+            
+          
+      </div>
+      
+    </div>
+    <div id="contact" class="tab-content" style="display: none">
+      <h2>want to book us? say hi? do it</h2>
+      <form
+        action="mailto:skrabicf@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <div class="field-row-stacked">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="field-row-stacked">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+        <div class="field-row-stacked">
+          <label for="inquiry">Type of Inquiry:</label>
+          <select id="inquiry" name="inquiry" required>
+            <option value="booking">Booking Request</option>
+            <option value="info">Info</option>
+          </select>
+        </div>
+        <div class="field-row-stacked">
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="8"
+            required
+          ></textarea>
+        </div>
+        <br /><br />
+        <button type="submit">Send!</button>
+      </form>
+    </div>
+      </div>
+    <script src="index.js"></script>
+  </body>
+</html>
