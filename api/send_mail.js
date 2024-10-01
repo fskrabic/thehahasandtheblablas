@@ -2,10 +2,22 @@ const nodemailer = require("nodemailer");
 
 export default async function (req, res) {
   if (req.method === "POST") {
-    const { name, title, email, inquiry, message } = req.body;
+    const { captcha, honeyPot, name, title, email, inquiry, message } =
+      req.body;
 
-    if (!name || !title || !inquiry || !message) {
+    if (!name || !title || !inquiry || !message || !captcha) {
       return res.status(400).json({ error: "Missing required fields" });
+    }
+
+    if (honeyPot) {
+      return res.status(400).json({ error: "Nope" });
+    }
+
+    const correctAnswer = 666;
+    if (parseInt(captcha) !== correctAnswer) {
+      return res
+        .status(400)
+        .json({ error: "Incorrect CAPTCHA answer. Please try again." });
     }
 
     try {
