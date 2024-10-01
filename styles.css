@@ -179,3 +179,7 @@ iframe#videoFrame {
   color: rgb(6, 197, 31);
   font-size: 15px;
 }
+#responseMessage {
+  margin-top: 1em;
+  font-size: large;
+}
