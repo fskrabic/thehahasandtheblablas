@@ -258,7 +258,7 @@
     </div>
     <div id="contact" class="tab-content" style="display: none">
       <h2>want to book us? say hi? do it</h2>
-      <form id="contactForm" action="/api/send_mail" method="POST">
+      <form id="contactForm">
         <div class="field-row-stacked">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
@@ -288,7 +288,9 @@
         </div>
     
         <button type="submit">Send!</button>
-    </form>    
+    </form>
+    
+    <div id="responseMessage"></div>   
     </div>
       </div>
     <script src="index.js"></script>

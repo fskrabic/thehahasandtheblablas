@@ -34,3 +34,51 @@ function changeVideo(videoID) {
   const iframe = document.getElementById("videoFrame");
   iframe.src = `https://www.youtube.com/embed/${videoID}`;
 }
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault(); // Prevent the default form submit behavior (page reload)
+
+    // Collect form data
+    const formData = new FormData(this);
+
+    // Convert FormData to a plain object to send via JSON
+    const formObject = {};
+    formData.forEach((value, key) => {
+      formObject[key] = value;
+    });
+
+    // Send form data using Fetch API
+    try {
+      const response = await fetch("/api/send_mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formObject),
+      });
+
+      // Handle the server response
+      const result = await response.json();
+
+      if (response.ok) {
+        // Display success message
+        document.getElementById("responseMessage").textContent =
+          "Your message was sent successfully!";
+        document.getElementById("responseMessage").style.color = "green";
+        document.getElementById("contactForm").reset(); // Clear the form fields after submission
+      } else {
+        // Handle errors (e.g., validation or server error)
+        document.getElementById(
+          "responseMessage"
+        ).textContent = `Error: ${result.error}`;
+        document.getElementById("responseMessage").style.color = "red";
+      }
+    } catch (error) {
+      // Handle network or unexpected errors
+      document.getElementById("responseMessage").textContent =
+        "An error occurred while sending the message.";
+      document.getElementById("responseMessage").style.color = "red";
+    }
+  });
