@@ -42,14 +42,14 @@ body::before {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  margin: 10px; /* Keeps a small margin for background visibility */
-  box-sizing: border-box; /* Ensure padding and borders are counted in the size */
+  margin: 10px;
+  box-sizing: border-box;
 }
 
 .window-body {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 30px); /* Subtracting the height of the title bar */
+  height: calc(100% - 30px);
   overflow-y: auto;
 }
 
@@ -236,21 +236,18 @@ iframe#videoFrame {
   padding: 20px;
   font-size: large;
   color: white;
-  height: 45vh;
+  height: 50vh;
   overflow-y: auto;
   font-family: monospace;
   white-space: pre-wrap;
   word-wrap: break-word;
-  align-content: center;
-  margin: auto;
 }
 
-/* Responsive styles for smaller screens */
 @media (max-width: 850px) {
   .app {
     width: 100vw;
     height: 100vh;
-    margin: 0; /* Remove margin for full-screen experience */
+    margin: 0;
     border: 2px solid rgb(6, 197, 31);
   }
 
@@ -259,7 +256,7 @@ iframe#videoFrame {
   }
 
   .tablist {
-    padding: 5px; /* Add more space to the tabs */
+    padding: 5px;
     justify-content: flex-start;
     gap: 5px;
   }
