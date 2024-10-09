@@ -29,8 +29,8 @@ body::before {
 }
 
 .app {
-  width: 70vw;
-  height: 80vh;
+  width: 95vw;
+  height: 90vh;
   max-width: 1280px;
   max-height: 960px;
   background-color: rgba(0, 0, 0, 0.8);
@@ -42,41 +42,63 @@ body::before {
   z-index: 1;
   display: flex;
   flex-direction: column;
+  margin: 10px; /* Keeps a small margin for background visibility */
+  box-sizing: border-box; /* Ensure padding and borders are counted in the size */
 }
 
 .window-body {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: calc(100% - 30px); /* Subtracting the height of the title bar */
+  overflow-y: auto;
 }
+
 .window {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   height: 100%;
   background-color: black;
   box-shadow: inset -1px -1px navy, inset 1px 1px navy, inset -2px -2px navy,
     inset 2px 2px navy;
 }
+
 .tablist {
   background-color: silver;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  overflow-x: hidden;
+  flex-wrap: nowrap;
 }
+
 .tab[aria-selected="true"] {
   background-color: navy;
   box-shadow: inset -1px 0 navy, inset 1px 1px navy, inset -2px 0 navy,
     inset 2px 2px navy;
 }
+
 menu[role="tablist"] > li[aria-selected="true"] {
   background-color: navy;
 }
+
 menu[role="tablist"] > li[aria-selected="true"] > a {
   color: whitesmoke;
 }
+
 .tab {
-  width: 23%;
+  width: auto;
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  white-space: nowrap;
 }
+
 .hover-container {
   display: inline-block;
 }
+
 .hover-image {
   width: 100%;
   max-width: 80%;
@@ -88,12 +110,12 @@ menu[role="tablist"] > li[aria-selected="true"] > a {
   transform: translateX(-50%);
   opacity: 0;
   height: 100%;
-
   transition: opacity 0.5s ease-in-out;
   pointer-events: none;
 }
 
-.hover-container:hover .hover-image {
+.hover-container:hover .hover-image,
+.hover-image.active {
   opacity: 1;
 }
 
@@ -102,6 +124,7 @@ form {
   flex-direction: column;
   align-items: center;
 }
+
 form label {
   font-size: large;
 }
@@ -115,34 +138,41 @@ form div.field-row-stacked:last-of-type {
 }
 
 .sunken-panel {
-  width: 30vw;
+  width: 40vw;
   height: 45vh;
 }
+
 table.interactive {
   width: 100%;
   overflow: scroll;
 }
+
 .gig-tables {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 1rem;
 }
+
 #gigs h4 {
   position: relative;
   font-size: 15px;
 }
+
 h4.past {
   left: 25%;
 }
+
 h4.future {
   left: 67%;
 }
+
 tr {
   width: 100%;
   color: #222;
   height: 25px;
 }
+
 .titles {
   display: flex;
   flex-direction: row;
@@ -151,35 +181,150 @@ tr {
 .title-bar {
   height: 30px;
 }
+
 .title-bar-text {
   font-size: large;
 }
+
 .title-bar-controls button[aria-label="Help"] {
   height: 25px;
   width: 25px;
   background-position: 48%;
 }
+
 .title-bar-controls button[aria-label="Close"] {
   height: 25px;
   width: 25px;
   background-position: 48%;
 }
-div.video-buttons {
+
+div.video-buttons,
+div.lyrics-buttons {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 1em;
   gap: 1em;
 }
+div.video-buttons button {
+  word-wrap: break-word;
+}
+
 iframe#videoFrame {
   height: 432px;
   width: 576px;
 }
+
 .tab-content#music p {
   color: rgb(6, 197, 31);
   font-size: 15px;
 }
+
 #responseMessage {
   margin-top: 1em;
   font-size: large;
+}
+
+.lyrics {
+  display: flex;
+  flex-direction: column;
+}
+
+.lyrics-container {
+  margin: 1em;
+  width: 40vw;
+  padding: 20px;
+  font-size: large;
+  color: white;
+  height: 45vh;
+  align-self: center;
+  overflow-y: auto;
+  text-align: center;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 850px) {
+  .app {
+    width: 100vw;
+    height: 100vh;
+    margin: 0; /* Remove margin for full-screen experience */
+    border: 2px solid rgb(6, 197, 31);
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .tablist {
+    padding: 5px; /* Add more space to the tabs */
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  .tab {
+    width: auto;
+    font-size: smaller;
+    padding: 5px;
+  }
+
+  iframe#videoFrame {
+    width: 90%;
+    height: 45vh;
+  }
+
+  .sunken-panel {
+    width: 45vw;
+    height: 50vh;
+  }
+
+  table.interactive {
+    font-size: smaller;
+  }
+
+  .field-row-stacked {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    width: 100vw;
+    height: 100vh;
+    margin: 3px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .tab {
+    width: auto;
+    font-size: smaller;
+    padding: 5px;
+  }
+
+  iframe#videoFrame {
+    width: 95%;
+    height: 45vh;
+  }
+
+  .sunken-panel {
+    width: 100%;
+  }
+
+  .video-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  form label {
+    font-size: medium;
+  }
+
+  .field-row-stacked {
+    width: 90%;
+  }
 }
