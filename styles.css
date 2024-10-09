@@ -7,7 +7,7 @@ body {
   align-items: center;
   background-color: black;
   position: relative;
-  overflow-y: scroll;
+  overflow: scroll;
 }
 
 body::before {
@@ -206,7 +206,8 @@ div.lyrics-buttons {
   margin-bottom: 1em;
   gap: 1em;
 }
-div.video-buttons button {
+div.video-buttons button,
+div.lyrics-buttons button {
   word-wrap: break-word;
 }
 
@@ -232,17 +233,16 @@ iframe#videoFrame {
 
 .lyrics-container {
   margin: 1em;
-  width: 40vw;
   padding: 20px;
   font-size: large;
   color: white;
   height: 45vh;
-  align-self: center;
   overflow-y: auto;
-  text-align: center;
   font-family: monospace;
   white-space: pre-wrap;
   word-wrap: break-word;
+  align-content: center;
+  margin: auto;
 }
 
 /* Responsive styles for smaller screens */
