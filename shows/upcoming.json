@@ -1,0 +1,89 @@
+{
+  "concerts": [
+    {
+      "date": "26.10.2024",
+      "location": "Grof Melin, Zagreb, Croatia",
+      "bands": "Alpha Strategy, ČudNoReĐe, Šarijanata, Željezne Pilule"
+    },
+    {
+      "date": "1.2.2025",
+      "location": "TBA, Škofja Loka, Slovenia",
+      "bands": "TBA"
+    },
+    {
+      "date": "10.2.2025",
+      "location": "TBA, Belgrade, Serbia",
+      "bands": "TBA"
+    },
+    {
+      "date": "13.2.2025",
+      "location": "TBA, Zagreb, Croatia",
+      "bands": "TBA"
+    },
+    {
+      "date": "16.2.2025",
+      "location": "TBA, Brno, Czechia",
+      "bands": "TBA"
+    },
+    {
+      "date": "17.2.2025",
+      "location": "TBA, Prague, Czechia",
+      "bands": "TBA"
+    },
+    {
+      "date": "19.2.2025",
+      "location": "TBA, Fürth, Germany",
+      "bands": "TBA"
+    },
+    {
+      "date": "20.2.2025",
+      "location": "TBA, Würzburg, Germany",
+      "bands": "TBA"
+    },
+    {
+      "date": "21.2.2025",
+      "location": "TBA, Erfurt, Germany",
+      "bands": "TBA"
+    },
+    {
+      "date": "22.2.2025",
+      "location": "TBA, Berlin, Germany",
+      "bands": "TBA"
+    },
+    {
+      "date": "23.2.2025",
+      "location": "TBA, Potsdam, Germany",
+      "bands": "TBA"
+    },
+    {
+      "date": "27.2.2025",
+      "location": "TBA, Hanover, Germany",
+      "bands": "TBA"
+    },
+    {
+      "date": "28.2.2025",
+      "location": "TBA, Hamburg, Germany",
+      "bands": "TBA"
+    },
+    {
+      "date": "2.3.2025",
+      "location": "TBA, Gent, Belgium",
+      "bands": "TBA"
+    },
+    {
+      "date": "3.3.2025",
+      "location": "TBA, Bruxelles, Belgium",
+      "bands": "TBA"
+    },
+    {
+      "date": "4.3.2025",
+      "location": "TBA, Luxembourg, Luxembourg",
+      "bands": "TBA"
+    },
+    {
+      "date": "7.3.2025",
+      "location": "TBA, Kreuzlingen, Switzerland",
+      "bands": "TBA"
+    }
+  ]
+}
