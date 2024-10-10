@@ -138,7 +138,7 @@ form div.field-row-stacked:last-of-type {
 }
 
 .sunken-panel {
-  width: 40vw;
+  width: 25vw;
   height: 45vh;
 }
 
@@ -151,20 +151,7 @@ table.interactive {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 1rem;
-}
-
-#gigs h4 {
-  position: relative;
-  font-size: 15px;
-}
-
-h4.past {
-  left: 25%;
-}
-
-h4.future {
-  left: 67%;
+  gap: 5rem;
 }
 
 tr {
@@ -175,7 +162,15 @@ tr {
 
 .titles {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  gap: 20px; /* Adds some space between the two titles */
+  text-align: center;
+  margin-bottom: 20px; /* Adjust space below the titles */
+}
+
+.titles h4 {
+  margin: 0; /* Remove default margin */
+  padding: 0;
 }
 
 .title-bar {
@@ -284,6 +279,11 @@ iframe#videoFrame {
   .field-row-stacked {
     width: 80%;
   }
+
+  .gig-tables {
+    gap: 1rem;
+    margin: 0 5px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -291,6 +291,12 @@ iframe#videoFrame {
     width: 100vw;
     height: 100vh;
     margin: 3px;
+  }
+
+  .gig-tables {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
   }
 
   h1 {
