@@ -292,9 +292,11 @@ iframe#videoFrame {
     height: 100vh;
     margin: 3px;
   }
+  .gig-panel {
+    width: 90%;
+  }
 
   .gig-tables {
-    justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 1rem;
   }
