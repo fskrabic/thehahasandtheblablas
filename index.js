@@ -111,15 +111,16 @@ function setupContactForm() {
     });
 }
 
-function logVisits() {
-  fetch("/api/visit-counter")
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById(
-        "visit-count"
-      ).textContent = `Visits: ${data.visits}`;
-    })
-    .catch((error) => console.error("Error fetching visit count:", error));
+async function logVisits() {
+  try {
+    const response = await fetch("/api/visit-counter");
+    const data = await response.json();
+    document.getElementById(
+      "visit-count"
+    ).textContent = `Visits: ${data.visits}`;
+  } catch (error) {
+    console.error("Error fetching visit count:", error);
+  }
 }
 
 function loadConcerts(type, reverseOrder) {
