@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   setupContactForm();
   loadConcerts("past", true);
   loadConcerts("upcoming", false);
+  logVisits();
 });
 
-// Tab Switching Setup
 function setupTabs() {
   const tabs = document.querySelectorAll(".tab");
   const tabContents = document.querySelectorAll(".tab-content");
@@ -26,7 +26,6 @@ function setupTabs() {
   });
 }
 
-// Interactive Table Setup
 function setupInteractiveTables() {
   document.querySelectorAll("table.interactive").forEach((table) => {
     table.addEventListener("click", (event) => {
@@ -38,7 +37,6 @@ function setupInteractiveTables() {
   });
 }
 
-// Hover Image on Touch Devices
 const hoverContainer = document.querySelector(".hover-container");
 const hoverImage = document.querySelector(".hover-image");
 
@@ -49,13 +47,11 @@ hoverContainer.addEventListener("touchend", () =>
   hoverImage.classList.remove("active")
 );
 
-// Change YouTube Video
 function changeVideo(videoID) {
   const iframe = document.getElementById("videoFrame");
   iframe.src = `https://www.youtube.com/embed/${videoID}`;
 }
 
-// Load Lyrics from a File
 function loadLyrics(fileName) {
   const lyricsContainer = document.getElementById("lyricsContainer");
 
@@ -69,7 +65,6 @@ function loadLyrics(fileName) {
       console.error("Error fetching lyrics:", error);
     });
 
-  // Update active button state
   document.querySelectorAll(".lyrics-buttons button").forEach((button) => {
     button.classList.remove("active");
   });
@@ -79,7 +74,6 @@ function loadLyrics(fileName) {
   activeButton?.classList.add("active");
 }
 
-// Handle Contact Form Submission
 function setupContactForm() {
   document
     .getElementById("contactForm")
@@ -117,16 +111,17 @@ function setupContactForm() {
     });
 }
 
-fetch("/api/visit-counter")
-  .then((response) => response.json())
-  .then((data) => {
-    document.getElementById(
-      "visit-count"
-    ).textContent = `Visits: ${data.visits}`;
-  })
-  .catch((error) => console.error("Error fetching visit count:", error));
+function logVisits() {
+  fetch("/api/visit-counter")
+    .then((response) => response.json())
+    .then((data) => {
+      document.getElementById(
+        "visit-count"
+      ).textContent = `Visits: ${data.visits}`;
+    })
+    .catch((error) => console.error("Error fetching visit count:", error));
+}
 
-// Load Concert Data
 function loadConcerts(type, reverseOrder) {
   fetch(`./shows/${type}.json`)
     .then((response) => response.json())
