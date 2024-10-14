@@ -5,6 +5,8 @@ const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default async function handler(req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET");
   if (req.method === "GET") {
     try {
       console.log(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
