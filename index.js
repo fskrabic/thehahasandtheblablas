@@ -117,6 +117,15 @@ function setupContactForm() {
     });
 }
 
+fetch("/api/visit-counter")
+  .then((response) => response.json())
+  .then((data) => {
+    document.getElementById(
+      "visit-count"
+    ).textContent = `Visits: ${data.visits}`;
+  })
+  .catch((error) => console.error("Error fetching visit count:", error));
+
 // Load Concert Data
 function loadConcerts(type, reverseOrder) {
   fetch(`./shows/${type}.json`)
