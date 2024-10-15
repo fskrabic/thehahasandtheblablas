@@ -7,34 +7,41 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export default async function handler(req, res) {
   if (req.method === "GET") {
     try {
+      // Fetch the current count
       const { data, error: fetchError } = await supabase
         .from("visit_counter")
         .select("count")
         .eq("id", 1)
         .single();
 
-      console.log("Data from Supabase:", data);
-      console.log("Fetch error (if any):", fetchError);
+      if (fetchError && fetchError.code === "PGRST116") {
+        console.log("Row not found, creating a new entry...");
+
+        // Insert the row if not found
+        const { error: insertError } = await supabase
+          .from("visit_counter")
+          .insert([{ id: 1, count: 0 }]);
+
+        if (insertError) throw insertError;
+
+        return res.status(201).json({ visits: 0 });
+      }
 
       if (fetchError) {
         throw fetchError;
       }
 
-      if (!data) {
-        return res.status(404).json({ error: "Visit count not found" });
-      }
-
       const currentCount = data.count;
 
+      // Update the visit count
       const { error: updateError } = await supabase
         .from("visit_counter")
         .update({ count: currentCount + 1 })
         .eq("id", 1);
 
-      if (updateError) {
-        throw updateError;
-      }
+      if (updateError) throw updateError;
 
+      // Return the updated count
       res.status(200).json({ visits: currentCount + 1 });
     } catch (error) {
       console.error("Error:", error);
