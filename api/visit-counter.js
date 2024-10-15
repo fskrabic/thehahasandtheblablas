@@ -4,6 +4,26 @@ const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+function getOrdinalSuffix(number) {
+  const remainderOfTen = number % 10;
+  const remainderOfHundred = number % 100;
+
+  if (remainderOfHundred >= 11 && remainderOfHundred <= 13) {
+    return `${number}th`;
+  }
+
+  switch (remainderOfTen) {
+    case 1:
+      return `${number}st`;
+    case 2:
+      return `${number}nd`;
+    case 3:
+      return `${number}rd`;
+    default:
+      return `${number}th`;
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method === "GET") {
     try {
@@ -38,7 +58,8 @@ export default async function handler(req, res) {
 
       if (updateError) throw updateError;
 
-      res.status(200).json({ visits: currentCount + 1 });
+      const updated = currentCount + 1;
+      res.status(200).json({ visits: getOrdinalSuffix(updated) });
     } catch (error) {
       console.error("Error:", error);
       res.status(500).json({ error: "Failed to update visit count" });

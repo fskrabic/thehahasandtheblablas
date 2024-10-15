@@ -163,13 +163,13 @@ tr {
 .titles {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Adds some space between the two titles */
+  gap: 20px;
   text-align: center;
-  margin-bottom: 20px; /* Adjust space below the titles */
+  margin-bottom: 20px;
 }
 
 .titles h4 {
-  margin: 0; /* Remove default margin */
+  margin: 0;
   padding: 0;
 }
 
@@ -236,6 +236,12 @@ iframe#videoFrame {
   font-family: monospace;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+div#visit-count {
+  font-size: medium;
+  margin-bottom: 1em;
+  color: rgb(6, 197, 31);
 }
 
 @media (max-width: 850px) {
