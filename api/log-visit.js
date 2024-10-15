@@ -1,5 +1,4 @@
 import { createClient } from "@supabase/supabase-js";
-import { fetch } from "node-fetch";
 
 // Initialize Supabase client
 const supabaseUrl = process.env.SUPABASE_URL;
@@ -18,7 +17,7 @@ async function getGeolocation(ip) {
   const url = `https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}&ip=${ip}`;
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(url); // Using native fetch now
     const data = await response.json();
 
     if (data && data.city && data.country_name) {
