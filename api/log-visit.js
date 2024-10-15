@@ -1,5 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
-import fetch from "node-fetch";
+import { fetch } from "node-fetch";
 
 // Initialize Supabase client
 const supabaseUrl = process.env.SUPABASE_URL;
