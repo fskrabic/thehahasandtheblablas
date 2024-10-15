@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadConcerts("past", true);
   loadConcerts("upcoming", false);
   logVisits();
+  logVisitInfo();
 });
 
 function setupTabs() {
@@ -121,6 +122,27 @@ async function logVisits() {
   } catch (error) {
     console.error("Error fetching visit count:", error);
   }
+}
+
+function logVisitInfo() {
+  const userAgent = navigator.userAgent;
+  const referrer = document.referrer;
+  const pagePath = window.location.pathname;
+
+  fetch("/api/log-visit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      userAgent,
+      referrer,
+      pagePath,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log("Visit logged:", data))
+    .catch((error) => console.error("Error logging visit:", error));
 }
 
 function loadConcerts(type, reverseOrder) {
