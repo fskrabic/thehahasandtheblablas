@@ -117,7 +117,7 @@ async function logVisits() {
     const data = await response.json();
     document.getElementById(
       "visit-count"
-    ).textContent = `you're the ${data}. visitor! congratz!`;
+    ).textContent = `you're the ${data.visits}. visitor! congratz!`;
   } catch (error) {
     console.error("Error fetching visit count:", error);
   }
