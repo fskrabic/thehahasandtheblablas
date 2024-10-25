@@ -70,6 +70,7 @@ body::before {
   padding: 0;
   overflow-x: hidden;
   flex-wrap: nowrap;
+  padding-left: 0px;
 }
 
 .tab[aria-selected="true"] {
@@ -179,6 +180,7 @@ tr {
 
 .title-bar-text {
   font-size: large;
+  padding-left: 9px;
 }
 
 .title-bar-controls button[aria-label="Help"] {
@@ -200,6 +202,7 @@ div.lyrics-buttons {
   justify-content: center;
   margin: 1em 0.5em;
   gap: 0.5em;
+  flex-wrap: wrap;
 }
 div.video-buttons button,
 div.lyrics-buttons button {
@@ -246,14 +249,21 @@ div#visit-count {
 
 @media (max-width: 850px) {
   .app {
-    width: 100vw;
-    height: 100vh;
+    width: 90vw;
+    height: 90vh;
     margin: 0;
     border: 2px solid rgb(6, 197, 31);
+  }
+  .title-bar-text {
+    font-size: larger;
   }
 
   h1 {
     font-size: 4rem;
+  }
+
+  .lyrics-container {
+    font-size: 12px;
   }
 
   .tablist {
@@ -274,7 +284,7 @@ div#visit-count {
   }
 
   .sunken-panel {
-    width: 45vw;
+    width: 40vw;
     height: 50vh;
   }
 
@@ -294,9 +304,8 @@ div#visit-count {
 
 @media (max-width: 480px) {
   .app {
-    width: 97vw;
-    height: 95vh;
-    margin: 3px;
+    width: 90vw;
+    height: 90vh;
   }
 
   .gig-panel {
