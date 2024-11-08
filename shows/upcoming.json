@@ -6,6 +6,16 @@
       "bands": "TBA"
     },
     {
+      "date": "7.2.2025",
+      "location": "TBA, Osijek, Croatia",
+      "bands": "TBA"
+    },
+    {
+      "date": "8.2.2025",
+      "location": "TBA, Tuzla, BiH",
+      "bands": "TBA"
+    },
+    {
       "date": "10.2.2025",
       "location": "TBA, Belgrade, Serbia",
       "bands": "TBA"
@@ -71,6 +81,11 @@
       "bands": "TBA"
     },
     {
+      "date": "1.3.2025",
+      "location": "TBA, Bonn, Germany",
+      "bands": "TBA"
+    },
+    {
       "date": "2.3.2025",
       "location": "TBA, Gent, Belgium",
       "bands": "TBA"
@@ -93,6 +108,11 @@
     {
       "date": "7.3.2025",
       "location": "TBA, Kreuzlingen, Switzerland",
+      "bands": "TBA"
+    },
+    {
+      "date": "8.3.2025",
+      "location": "TBA, Aarau, Switzerland",
       "bands": "TBA"
     }
   ]
