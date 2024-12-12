@@ -1,8 +1,8 @@
 {
   "concerts": [
     {
-      "date": "1.2.2025",
-      "location": "TBA, Škofja Loka, Slovenia",
+      "date": "6.2.2025",
+      "location": "TBA, Szeged, Hungary",
       "bands": "TBA"
     },
     {
@@ -20,6 +20,16 @@
       "location": "TBA, Belgrade, Serbia",
       "bands": "TBA"
     },
+    
+      "date": "11.2.2025",
+      "location": "TBA, Sombor, Serbia",
+      "bands": "TBA"
+    },
+    
+      "date": "12.2.2025",
+      "location": "TBA, Subotica, Serbia",
+      "bands": "TBA"
+    },
     {
       "date": "13.2.2025",
       "location": "TBA, Zagreb, Croatia",
@@ -28,11 +38,6 @@
     {
       "date": "15.2.2025",
       "location": "TBA, Murska Sobota, Slovenia",
-      "bands": "TBA"
-    },
-    {
-      "date": "16.2.2025",
-      "location": "TBA, Brno, Czechia",
       "bands": "TBA"
     },
     {
@@ -62,12 +67,17 @@
     },
     {
       "date": "22.2.2025",
-      "location": "TBA, Berlin, Germany",
+      "location": "SECRET GIG",
       "bands": "TBA"
     },
     {
       "date": "23.2.2025",
       "location": "TBA, Potsdam, Germany",
+      "bands": "TBA"
+    },
+    {
+      "date": "26.2.2025",
+      "location": "TBA, Berlin, Germany",
       "bands": "TBA"
     },
     {
