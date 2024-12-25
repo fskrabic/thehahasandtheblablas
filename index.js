@@ -141,7 +141,6 @@ function logVisitInfo() {
     }),
   })
     .then((response) => response.json())
-    .then((data) => console.log("Visit logged:", data))
     .catch((error) => console.error("Error logging visit:", error));
 }
 
