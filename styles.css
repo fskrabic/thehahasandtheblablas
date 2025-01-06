@@ -214,7 +214,7 @@ iframe#videoFrame {
   width: 576px;
 }
 
-.tab-content#music p {
+.tab-content#videos p {
   color: rgb(6, 197, 31);
   font-size: 15px;
 }
@@ -245,6 +245,17 @@ div#visit-count {
   font-size: medium;
   margin-bottom: 1em;
   color: rgb(6, 197, 31);
+}
+
+div.album-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: center;
+}
+
+iframe#bandcamp {
+  height: 472px !important;
 }
 
 @media (max-width: 850px) {
@@ -300,6 +311,14 @@ div#visit-count {
     gap: 1rem;
     margin: 0 5px;
   }
+
+  div.album-links {
+    flex-direction: column;
+    margin: 1em;
+  }
+  iframe#bandcamp {
+    width: 83vw !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -347,5 +366,13 @@ div#visit-count {
 
   .field-row-stacked {
     width: 90%;
+  }
+
+  div.album-links {
+    flex-direction: column;
+    margin: 1em;
+  }
+  iframe#bandcamp {
+    width: 78vw !important;
   }
 }

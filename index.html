@@ -27,8 +27,11 @@
         <li class="tab" role="tab" aria-selected="true" data-tab="home">
           <a href="#home">Home</a>
         </li>
-        <li class="tab" role="tab" data-tab="music">
-          <a href="#music">Music</a>
+        <li class="tab" role="tab" aria-selected="false" data-tab="album">
+          <a href="#album">ALBUM OUT NOW!</a>
+        </li>
+        <li class="tab" role="tab" data-tab="videos">
+          <a href="#videos">Videos</a>
         </li>
         <li class="tab" role="tab" data-tab="lyrics">
           <a href="#lyrics">Lyrics</a>
@@ -56,18 +59,39 @@
           </div>
           <h5>woof</h5>
         </div>
-        <div id="music" class="tab-content" style="display: none">
-          <h2>Our debut album is coming soon!</h2>
-          <p>meanwhile, check out our video singles!</p>
-          <div class="video-buttons">
-            <button onclick="changeVideo('cwrdxS6O_ls')">FROWNING RAT AND HIS SAD DESTINY</button>
-            <button onclick="changeVideo('OS9Vn-0p6lY')">ANDY KAUFMAN IS NOT MY DAD!</button>
-            <button onclick="changeVideo('gJHJ8vIXUSw')">BARK!</button>
-            <button onclick="changeVideo('cH56Iejf2PA')">BUREAUCRACY</button>
-            <button onclick="changeVideo('G83cJHNQFIQ')">FIX IT IN THE MIX</button>
-          </div>
-          <iframe id="videoFrame" src="https://www.youtube.com/embed/cwrdxS6O_ls"></iframe>
 
+        <div id="album" class="tab-content" style="display: none">
+          <h1>OUR DEBUT IS OUT!!!</h1>
+          <div class="album-links">
+            <iframe style="border: 0; width: 400px; height: 472px;"
+              id="bandcamp"
+              src="https://bandcamp.com/EmbeddedPlayer/album=3825298304/size=large/bgcol=333333/linkcol=fe7eaf/artwork=small/transparent=true/"
+              seamless><a href="https://veselajolly.bandcamp.com/album/s-t">S/T by The Hahas and the
+                Blablas</a></iframe>
+
+            <iframe height="315" src="https://www.youtube.com/embed/qf-3ec4_euM?si=5QeZ-UvGCZX06oor"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              
+            <iframe style="border-radius:12px"
+              src="https://open.spotify.com/embed/album/5ygReUvAIAZV47hRf0oOXM?utm_source=generator" height="472"
+              frameBorder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+          </div>
+        </div>
+        <div id="videos" class="tab-content" style="display: none">
+          <h2>Our debut album is OUT!!!<h2>
+              <p>but, you can still enjoy our video singles!</p>
+              <div class="video-buttons">
+                <button onclick="changeVideo('cwrdxS6O_ls')">FROWNING RAT AND HIS SAD DESTINY</button>
+                <button onclick="changeVideo('OS9Vn-0p6lY')">ANDY KAUFMAN IS NOT MY DAD!</button>
+                <button onclick="changeVideo('gJHJ8vIXUSw')">BARK!</button>
+                <button onclick="changeVideo('cH56Iejf2PA')">BUREAUCRACY</button>
+                <button onclick="changeVideo('G83cJHNQFIQ')">FIX IT IN THE MIX</button>
+              </div>
+              <iframe id="videoFrame" src="https://www.youtube.com/embed/cwrdxS6O_ls"></iframe>
         </div>
         <div id="lyrics" class="tab-content" style="display: none">
           <h2>LYRICS</h2>
@@ -77,6 +101,13 @@
             <button onclick="loadLyrics('./lyrics/bark.txt')">BARK!</button>
             <button onclick="loadLyrics('./lyrics/bureaucracy.txt')">BUREAUCRACY</button>
             <button onclick="loadLyrics('./lyrics/fixit.txt')">FIX IT IN THE MIX</button>
+            <button onclick="loadLyrics('./lyrics/98.txt')">LIKE IT'S 98</button>
+            <button onclick="loadLyrics('./lyrics/debbie.txt')">DEBBIE HARRY</button>
+            <button onclick="loadLyrics('./lyrics/friend.txt')">FRIEND FOR SALE</button>
+            <button onclick="loadLyrics('./lyrics/icke.txt')">DAVID ICKE</button>
+            <button onclick="loadLyrics('./lyrics/onlytime.txt')">ONLY TIME HE CRIED</button>
+            <button onclick="loadLyrics('./lyrics/rupert.txt')">RUPERT INTROVERT</button>
+            <button onclick="loadLyrics('./lyrics/stolen.txt')">STOLEN SONG</button>
           </div>
 
           <div id="lyricsContainer" class="lyrics-container">
