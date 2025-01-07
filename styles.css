@@ -75,6 +75,8 @@ body::before {
 
 .tab[aria-selected="true"] {
   background-color: navy;
+  margin-left: 0px !important;
+  margin-top: 0px !important;
   box-shadow: inset -1px 0 navy, inset 1px 1px navy, inset -2px 0 navy,
     inset 2px 2px navy;
 }
@@ -370,6 +372,7 @@ iframe#bandcamp {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     height: 5.5rem;
+    margin: 0 1px -2px;
   }
 
   iframe#videoFrame {
@@ -412,5 +415,9 @@ iframe#bandcamp {
     height: 130px;
     position: relative;
     top: -2.5rem;
+  }
+  .tab[aria-selected="true"] {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
   }
 }
