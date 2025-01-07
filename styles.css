@@ -328,6 +328,17 @@ iframe#bandcamp {
   iframe#bandcamp {
     width: 83vw !important;
   }
+  #rat1 {
+    width: 80px;
+    height: 80px;
+    margin-left: 1rem;
+  }
+  #rat2 {
+    width: 80px;
+    height: 80px;
+    padding-left: 0.5rem !important;
+    margin-right: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -352,7 +363,7 @@ iframe#bandcamp {
   .tab {
     width: auto;
     font-size: smaller;
-    padding: 5px;
+    padding: 3px;
   }
 
   iframe#videoFrame {
@@ -383,5 +394,17 @@ iframe#bandcamp {
   }
   iframe#bandcamp {
     width: 78vw !important;
+  }
+  .album-title {
+    flex-direction: column;
+  }
+  #rat1 {
+    display: none;
+  }
+  #rat2 {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    top: -2.5rem;
   }
 }
