@@ -366,6 +366,11 @@ iframe#bandcamp {
     padding: 3px;
   }
 
+  menu.tablist {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
   iframe#videoFrame {
     width: 95%;
     height: 45vh;
