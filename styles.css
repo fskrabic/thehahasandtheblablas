@@ -258,6 +258,15 @@ iframe#bandcamp {
   height: 472px !important;
 }
 
+.album-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.album-title h2 {
+  font-size: 3.5rem;
+}
+
 @media (max-width: 850px) {
   .app {
     width: 90vw;
