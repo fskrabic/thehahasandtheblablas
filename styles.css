@@ -36,7 +36,7 @@ div.credits {
 }
 
 div.credits .window-body {
-  height: 6vh;
+  height: 8vh;
   overflow: hidden;
 }
 
@@ -437,6 +437,10 @@ iframe#youtube {
     height: 90px;
   }
 
+  #handycam {
+    height: 55px;
+  }
+
   div.video-buttons button,
   div.lyrics-buttons button {
     font-size: 10px !important;
@@ -466,7 +470,7 @@ iframe#youtube {
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .tab {
