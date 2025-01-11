@@ -2,6 +2,10 @@
   font-family: "IBM";
   src: url("./ibm.woff");
 }
+@font-face {
+  font-family: "ACER";
+  src: url('./Web437_Acer710_Mono.woff');
+}
 
 ::-webkit-scrollbar {
   width: 9px;
@@ -16,7 +20,7 @@
 }
 
 * {
-  font-family: "IBM" !important;
+  font-family: "ACER" !important;
 }
 
 div.credits {
@@ -29,7 +33,7 @@ div.credits {
 }
 
 div.credits .window-body {
-  height: 8vh;
+  height: 6vh;
 }
 
 body {
@@ -172,7 +176,7 @@ table.interactive {
   flex-direction: row;
   justify-content: center;
   gap: 5rem;
-  margin-top: -35px;
+  margin-top: -70px;
 }
 
 tr {
@@ -281,10 +285,8 @@ div.album-links {
 }
 
 iframe#bandcamp {
-  /* height: 472px !important; */
   border: 0;
   height: 50vh;
-  /* margin-left: 2em; */
 }
 
 iframe#youtube {
@@ -300,7 +302,16 @@ iframe#youtube {
 .album-title h2 {
   font-size: 3.5rem;
 }
+#boombox {
+  margin-top: -60px;
+}
 @media (max-width: 1250px) and (min-width: 851px) {
+  .gifs {
+    margin-top: -64px;
+  }
+  #boombox {
+    margin-top: 0px;
+  }
   div.album-links {
     display: grid;
     grid-template-columns: repeat(3, 0fr);
@@ -320,11 +331,13 @@ iframe#youtube {
 }
 
 @media (max-width: 850px) {
+  #boombox {
+    margin-top: 0px;
+  }
   .app {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    /* border: 2px solid rgb(6, 197, 31); */
   }
   .title-bar-text {
     font-size: larger;
@@ -387,7 +400,7 @@ iframe#youtube {
     width: 80vw;
   }
   .gifs img {
-    height: 120px;
+    height: 100px;
   }
   #rat1 {
     width: 80px;
@@ -406,9 +419,16 @@ iframe#youtube {
   .gifs img {
     height: 100px;
   }
+  .gifs {
+    margin-top: -64px;
+  }
 }
 
 @media (max-width: 480px) {
+  .gifs {
+    margin-top: -64px;
+  }
+
   .gifs img {
     height: 90px;
   }
