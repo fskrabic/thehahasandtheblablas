@@ -175,3 +175,13 @@ function loadConcerts(type, reverseOrder) {
       console.error(`Error loading the ${type} concerts:`, error);
     });
 }
+function openCredits() {
+  const window = document.getElementById("credit-window");
+  window.style.visibility = "visible";
+  window.style.display = "block";
+}
+function hideCredits() {
+  console.log("hide");
+  const window = document.getElementById("credit-window");
+  window.style.visibility = "hidden";
+}

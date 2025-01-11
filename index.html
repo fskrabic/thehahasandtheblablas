@@ -18,7 +18,7 @@
     <div class="title-bar">
       <div class="title-bar-text">THE HAHAS AND THE BLABLAS</div>
       <div class="title-bar-controls">
-        <button aria-label="Help"></button>
+        <button aria-label="Help" onclick="openCredits()"></button>
         <button aria-label="Close"></button>
       </div>
     </div>
@@ -57,7 +57,13 @@
             </h4>
             <img src="hahasi.jpg" alt="Haha Blabla" class="hover-image" />
           </div>
-          <h5>woof</h5>
+          <div class="gifs">
+            <img src="./gifs/bandchadrummer.gif">
+            <br>
+            <img src="./gifs/guitar.gif">
+            <img src="./gifs/keyboard_musik036.gif">
+            <img src="./gifs/msguitar.gif">
+          </div>
         </div>
 
         <div id="album" class="tab-content" style="display: none">
@@ -66,25 +72,28 @@
             <h2>OUR DEBUT IS OUT!!!</h2>
             <img id="rat2" class="rotate" height="130" style="padding-left: 1rem" src="./rat.webp">
           </div>
-          
           <div class="album-links">
-            <iframe id="bandcamp" style="border: 0; width: 400px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album=3825298304/size=large/bgcol=333333/linkcol=fe7eaf/artwork=small/transparent=true/" seamless><a href="https://veselajolly.bandcamp.com/album/s-t">S/T by The Hahas and the Blablas</a></iframe>
+            <iframe id="bandcamp" src="https://bandcamp.com/EmbeddedPlayer/album=3825298304/size=large/bgcol=333333/linkcol=fe7eaf/artwork=small/transparent=true/" seamless><a href="https://veselajolly.bandcamp.com/album/s-t">S/T by The Hahas and the Blablas</a></iframe>
 
-            <iframe height="315" src="https://www.youtube.com/embed/qf-3ec4_euM?si=5QeZ-UvGCZX06oor"
+            <iframe id="youtube" src="https://www.youtube.com/embed/qf-3ec4_euM?si=5QeZ-UvGCZX06oor"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               
-            <iframe style="border-radius:12px"
+            <iframe id="spotify" style="border-radius:12px"
               src="https://open.spotify.com/embed/album/5ygReUvAIAZV47hRf0oOXM?utm_source=generator" height="472"
               frameBorder="0" allowfullscreen=""
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"></iframe>
           </div>
+          <div class="gifs">
+            <img id="boombox" src="./gifs/Boombox-01.gif">
+          </div>
         </div>
         <div id="videos" class="tab-content" style="display: none">
-          <h2>Our debut album is OUT!!!<h2>
-              <p>but, you can still enjoy our video singles!</p>
+          <h2>Our debut album is OUT!!!</h2>
+              <p>but, you can still enjoy our video singles! <img src="./gifs/handycam.gif"></p>
+              
               <div class="video-buttons">
                 <button onclick="changeVideo('cwrdxS6O_ls')">FROWNING RAT AND HIS SAD DESTINY</button>
                 <button onclick="changeVideo('OS9Vn-0p6lY')">ANDY KAUFMAN IS NOT MY DAD!</button>
@@ -116,6 +125,7 @@
         </div>
         <div id="gigs" class="tab-content" style="display: none">
           <h2>GIGS</h2>
+          <img src="./gifs/earth.gif">
           <div class="gig-tables">
             <div class="gig-panel">
               <h4 class="upcoming">Upcoming</h4>
@@ -152,7 +162,7 @@
           </div>
         </div>
         <div id="contact" class="tab-content" style="display: none">
-          <h2>want to book us? say hi? do it</h2>
+          <h2>want to book us? say hi? do it here</h2>
           <div id="visit-count"></div>
           <form id="contactForm">
             <div class="field-row-stacked">
@@ -193,7 +203,24 @@
             <button type="submit">Send!</button>
           </form>
 
+          <br>
+          <img src="./gifs/email.gif">
+          <br>
+          <img src="./gifs/phonering.gif">
+
           <div id="responseMessage"></div>
+        </div>
+      </div>
+      <div id="credit-window" class="window credits" style="display:none; width: 33vw">
+        <div class="title-bar">
+          <div class="title-bar-text">Thank you for visiting us!</div>
+          <div class="title-bar-controls">
+            <button aria-label="Close" onclick="hideCredits()"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <p>Created by fskrabic, 2025.</p>
+          <p>Font by <a href=https://int10h.org/oldschool-pc-fonts>VileR</a></p>
         </div>
       </div>
       <script src="index.js"></script>
