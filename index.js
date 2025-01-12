@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  loadLyrics("./lyrics/andy.txt");
+  loadLyrics("./assets/lyrics/andy.txt");
   setupTabs();
   setupInteractiveTables();
   setupContactForm();
@@ -145,7 +145,7 @@ function logVisitInfo() {
 }
 
 function loadConcerts(type, reverseOrder) {
-  fetch(`./shows/${type}.json`)
+  fetch(`./assets/shows/${type}.json`)
     .then((response) => response.json())
     .then((data) => {
       const tableBody = document.querySelector(`#${type}Gigs tbody`);

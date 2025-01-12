@@ -32,11 +32,8 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     try {
       const ip = getIp(req);
-
       const location = await getGeolocation(ip);
-
       const { userAgent, referrer, pagePath } = req.body;
-
       const { error } = await supabase.from("page_visits").insert([
         {
           user_agent: userAgent,
@@ -50,7 +47,6 @@ export default async function handler(req, res) {
       if (error) {
         throw error;
       }
-
       res.status(200).json({ message: "Visit logged successfully" });
     } catch (error) {
       console.error("Error logging visit:", error);

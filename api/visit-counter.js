@@ -50,7 +50,6 @@ export default async function handler(req, res) {
       }
 
       const currentCount = data.count;
-
       const { error: updateError } = await supabase
         .from("visit_counter")
         .update({ count: currentCount + 1 })

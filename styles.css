@@ -1,21 +1,25 @@
 @font-face {
   font-family: "IBM";
-  src: url("./ibm.woff");
+  src: url("./assets/fonts/ibm.woff");
 }
+
 @font-face {
   font-family: "ACER";
-  src: url('./Web437_Acer710_Mono.woff');
+  src: url("./assets/fonts/Web437_Acer710_Mono.woff");
 }
 
 ::-webkit-scrollbar {
   width: 0px;
 }
+
 ::-webkit-scrollbar:horizontal {
   height: 0px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: rgba(155, 155, 155, 0.5);
   border-radius: 20px;
@@ -24,20 +28,6 @@
 
 * {
   font-family: "ACER" !important;
-}
-
-div.credits {
-  position: absolute;
-  z-index: 10000;
-  width: 60vw !important;
-  height: 15vh;
-  left: 20%;
-  top: 45%;
-}
-
-div.credits .window-body {
-  height: 8vh;
-  overflow: hidden;
 }
 
 body {
@@ -66,6 +56,20 @@ body {
   box-sizing: border-box;
 }
 
+div.credits {
+  position: absolute;
+  z-index: 10000;
+  width: 60vw !important;
+  height: 15vh;
+  left: 20%;
+  top: 45%;
+}
+
+div.credits .window-body {
+  height: 8vh;
+  overflow: hidden;
+}
+
 .window-body {
   display: flex;
   flex-direction: column;
@@ -92,6 +96,11 @@ body {
   flex-wrap: nowrap;
   padding-left: 0px !important;
   margin: 3px 0 0 0 !important;
+}
+
+.tab a {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .tab[aria-selected="true"] {
@@ -236,6 +245,7 @@ div.lyrics-buttons {
   gap: 0.5em;
   flex-wrap: wrap;
 }
+
 div.video-buttons button,
 div.lyrics-buttons button {
   word-wrap: break-word;
@@ -303,19 +313,24 @@ iframe#youtube {
   justify-content: center;
   align-items: center;
 }
+
 .album-title h2 {
   font-size: 3.5rem;
 }
+
 #boombox {
   margin-top: -60px;
 }
+
 @media (max-width: 1250px) and (min-width: 851px) {
   .gifs {
     margin-top: -64px;
   }
+
   #boombox {
     margin-top: 0px;
   }
+
   div.album-links {
     display: grid;
     grid-template-columns: repeat(3, 0fr);
@@ -323,12 +338,15 @@ iframe#youtube {
     grid-column-gap: 2em;
     grid-row-gap: 10px;
   }
+
   iframe#bandcamp {
     grid-area: 1 / 1 / 2 / 2;
   }
+
   iframe#youtube {
     grid-area: 1 / 2 / 2 / 3;
   }
+
   iframe#spotify {
     grid-area: 2 / 2 / 3 / 2;
   }
@@ -338,11 +356,13 @@ iframe#youtube {
   #boombox {
     margin-top: 0px;
   }
+
   .app {
     width: 100vw;
     height: 100vh;
     margin: 0;
   }
+
   .title-bar-text {
     font-size: larger;
   }
@@ -393,29 +413,42 @@ iframe#youtube {
     flex-direction: column;
     margin: 1em;
   }
+
   iframe#bandcamp {
     width: 80vw !important;
   }
+
   iframe#spotify {
     width: 80vw;
   }
+
   iframe#youtube {
     height: 45vh;
     width: 80vw;
   }
+
   .gifs img {
     height: 100px;
   }
+
   #rat1 {
     width: 80px;
     height: 80px;
     margin-left: 1rem;
   }
+
   #rat2 {
     width: 80px;
     height: 80px;
     padding-left: 0.5rem !important;
     margin-right: 1rem;
+  }
+
+  #phonering {
+    position: absolute;
+    top: 9rem;
+    right: 2.5rem;
+    height: 85px;
   }
 }
 
@@ -423,6 +456,7 @@ iframe#youtube {
   .gifs img {
     height: 100px;
   }
+
   .gifs {
     margin-top: -64px;
   }
@@ -444,7 +478,7 @@ iframe#youtube {
   div.video-buttons button,
   div.lyrics-buttons button {
     font-size: 10px !important;
-    padding: 5px!important;
+    padding: 5px !important;
   }
 
   h2 {
@@ -516,44 +550,74 @@ iframe#youtube {
     flex-direction: column;
     margin: 1em;
   }
+
   iframe#bandcamp {
     width: 78vw !important;
   }
+
   .album-title {
     flex-direction: column;
   }
+
   #rat1 {
     display: none;
   }
+
   #rat2 {
     width: 130px;
     height: 130px;
     position: relative;
     top: -2.5rem;
   }
+
+  #phonering {
+    position: absolute;
+    top: 7rem;
+    right: 0.5rem;
+    height: 70px;
+  }
+
   .tab[aria-selected="true"] {
     margin-left: 0px !important;
     margin-top: 0px !important;
   }
 }
+
 @media (max-width: 395px) {
   .gifs img {
     height: 65px;
   }
+
   .lyrics-buttons button {
     padding: 0;
   }
+
+  #phonering {
+    position: absolute;
+    height: 50px;
+    top: 8rem;
+    right: 1rem;
+  }
 }
+
 @media (max-width: 313px) {
   .lyrics-buttons {
     margin: 0 !important;
     gap: 0.2em !important;
   }
+
   .lyrics-buttons button {
     padding: 0;
   }
+
   .tab {
     width: auto;
     font-size: 10px;
+  }
+  #phonering {
+    position: absolute;
+    height: 50px;
+    top: 11rem;
+    right: 0.5rem;
   }
 }
