@@ -1,3 +1,4 @@
+/* fonts */
 @font-face {
   font-family: "IBM";
   src: url("./assets/fonts/ibm.woff");
@@ -8,6 +9,11 @@
   src: url("./assets/fonts/Web437_Acer710_Mono.woff");
 }
 
+* {
+  font-family: "ACER" !important;
+}
+
+/* scrollbars */
 ::-webkit-scrollbar {
   width: 0px;
 }
@@ -26,9 +32,7 @@
   border: transparent;
 }
 
-* {
-  font-family: "ACER" !important;
-}
+/* body and layout */
 
 body {
   margin: 0;
@@ -119,10 +123,6 @@ menu[role="tablist"] > li[aria-selected="true"] > a {
   color: whitesmoke;
 }
 
-#landing-gifs img {
-  height: 130px;
-}
-
 .tab {
   width: auto;
   flex-grow: 1;
@@ -132,8 +132,29 @@ menu[role="tablist"] > li[aria-selected="true"] > a {
   white-space: nowrap;
 }
 
-.hover-container {
-  display: inline-block;
+div#visit-count {
+  font-size: medium;
+  margin-bottom: 1em;
+  color: rgb(6, 197, 31);
+}
+
+div.album-links {
+  display: flex;
+  flex-direction: row;
+  gap: 4em;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* images */
+#landing-gifs img {
+  height: 130px;
 }
 
 .hover-image {
@@ -151,10 +172,20 @@ menu[role="tablist"] > li[aria-selected="true"] > a {
   pointer-events: none;
 }
 
+.hover-container {
+  display: inline-block;
+}
+
 .hover-container:hover .hover-image,
 .hover-image.active {
   opacity: 1;
 }
+
+#boombox {
+  margin-top: -60px;
+}
+
+/* form */
 
 form {
   display: flex;
@@ -173,6 +204,13 @@ form div.field-row-stacked {
 form div.field-row-stacked:last-of-type {
   margin-bottom: 20px;
 }
+
+#responseMessage {
+  margin-top: 1em;
+  font-size: large;
+}
+
+/* tables */
 
 .sunken-panel {
   width: 40vw;
@@ -197,6 +235,8 @@ tr {
   color: #222;
   height: 25px;
 }
+
+/* headings */
 
 .titles {
   display: flex;
@@ -223,6 +263,12 @@ h4.haha {
   font-size: large;
   padding-left: 9px;
 }
+
+.album-title h2 {
+  font-size: 3.5rem;
+}
+
+/* buttons */
 
 .title-bar-controls button[aria-label="Help"] {
   height: 25px;
@@ -252,6 +298,8 @@ div.lyrics-buttons button {
   font-size: 15px;
 }
 
+/* videos */
+
 iframe#videoFrame {
   height: 432px;
   width: 576px;
@@ -262,10 +310,17 @@ iframe#videoFrame {
   font-size: 15px;
 }
 
-#responseMessage {
-  margin-top: 1em;
-  font-size: large;
+iframe#bandcamp {
+  border: 0;
+  height: 50vh;
 }
+
+iframe#youtube {
+  height: 45vh;
+  width: 45vw;
+}
+
+/* lyrics */
 
 .lyrics {
   display: flex;
@@ -282,44 +337,6 @@ iframe#videoFrame {
   font-family: monospace;
   white-space: pre-wrap;
   word-wrap: break-word;
-}
-
-div#visit-count {
-  font-size: medium;
-  margin-bottom: 1em;
-  color: rgb(6, 197, 31);
-}
-
-div.album-links {
-  display: flex;
-  flex-direction: row;
-  gap: 4em;
-  align-items: center;
-  justify-content: center;
-}
-
-iframe#bandcamp {
-  border: 0;
-  height: 50vh;
-}
-
-iframe#youtube {
-  height: 45vh;
-  width: 45vw;
-}
-
-.album-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.album-title h2 {
-  font-size: 3.5rem;
-}
-
-#boombox {
-  margin-top: -60px;
 }
 
 @media (max-width: 1250px) and (min-width: 851px) {
@@ -614,6 +631,7 @@ iframe#youtube {
     width: auto;
     font-size: 10px;
   }
+
   #phonering {
     position: absolute;
     height: 50px;
