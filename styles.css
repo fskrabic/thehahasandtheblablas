@@ -79,6 +79,7 @@ div.credits .window-body {
   flex-direction: column;
   height: calc(100% - 30px);
   overflow-y: auto;
+  margin: 3px 0;
 }
 
 .window {
@@ -480,6 +481,9 @@ iframe#youtube {
 }
 
 @media (max-width: 480px) {
+  .window-body {
+    margin: 0 !important;
+  }
   .gifs {
     margin-top: -64px;
   }
@@ -589,7 +593,7 @@ iframe#youtube {
 
   #phonering {
     position: absolute;
-    top: 7rem;
+    top: 10rem;
     right: 0.5rem;
     height: 70px;
   }
