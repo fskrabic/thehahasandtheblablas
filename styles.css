@@ -477,9 +477,7 @@ iframe#youtube {
 @media (max-width: 676px) {
   div.credits {
     width: 50vw !important;
-    height: 15vh;
     left: 25%;
-    top: 45%;
   }
 
   div.credits .title-bar-text {
