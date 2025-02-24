@@ -1,56 +1,6 @@
 {
   "concerts": [
     {
-      "date": "13.2.2025",
-      "location": "Mochvara, Zagreb, Croatia",
-      "bands": "TBA"
-    },
-    {
-      "date": "14.2.2025",
-      "location": "Jalla Jalla, Ljubljana, Slovenia",
-      "bands": "TBA"
-    },
-    {
-      "date": "15.2.2025",
-      "location": "MIKK, Murska Sobota, Slovenia",
-      "bands": "TBA"
-    },
-    {
-      "date": "17.2.2025",
-      "location": "FAMU, Prague, Czechia",
-      "bands": "TBA"
-    },
-    {
-      "date": "18.2.2025",
-      "location": "Oberstuebchen, Regen, Germany",
-      "bands": "TBA"
-    },
-    {
-      "date": "19.2.2025",
-      "location": "Kunstkeller o27, Fürth, Germany",
-      "bands": "TBA"
-    },
-    {
-      "date": "20.2.2025",
-      "location": "Immerhin, Würzburg, Germany",
-      "bands": "TBA"
-    },
-    {
-      "date": "21.2.2025",
-      "location": "Frau Korte, Erfurt, Germany",
-      "bands": "TBA"
-    },
-    {
-      "date": "22.2.2025",
-      "location": "SECRET GIG",
-      "bands": "TBA"
-    },
-    {
-      "date": "23.2.2025",
-      "location": "Fliese, Potsdam, Germany",
-      "bands": "TBA"
-    },
-    {
       "date": "24.2.2025",
       "location": "Bagehl, Rostock, Germany",
       "bands": "TBA"
