@@ -148,82 +148,157 @@
     {
       "date": "6.2.2025",
       "location": "Varosi Rock Club, Szeged, Hungary",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe"
     },
     {
       "date": "7.2.2025",
       "location": "Slamanje, Osijek, Croatia",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe, Klaustrofonija, Lelee"
     },
     {
       "date": "8.2.2025",
       "location": "BAZA, Tuzla, BiH",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe"
     },
     {
       "date": "9.2.2025",
       "location": "DKC, Sarajevo, BiH",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe, Fuzzlija"
     },
     {
       "date": "10.2.2025",
       "location": "KC Ziva, Belgrade, Serbia",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe, Blaaz"
     },
     {
       "date": "11.2.2025",
       "location": "Dve debele krigle, Sombor, Serbia",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe"
     },
     {
       "date": "13.2.2025",
       "location": "Mochvara, Zagreb, Croatia",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe, Space Bucket"
     },
     {
       "date": "14.2.2025",
       "location": "Jalla Jalla, Ljubljana, Slovenia",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe"
     },
     {
       "date": "15.2.2025",
       "location": "MIKK, Murska Sobota, Slovenia",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe, Zivi zid"
     },
     {
       "date": "17.2.2025",
       "location": "FAMU, Prague, Czechia",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe, Granateze, Madigans "
     },
     {
       "date": "18.2.2025",
       "location": "Oberstuebchen, Regen, Germany",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe"
     },
     {
       "date": "19.2.2025",
       "location": "Kunstkeller o27, Fürth, Germany",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe"
     },
     {
       "date": "20.2.2025",
       "location": "Immerhin, Würzburg, Germany",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe"
     },
     {
       "date": "21.2.2025",
       "location": "Frau Korte, Erfurt, Germany",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe"
     },
     {
       "date": "22.2.2025",
-      "location": "SECRET GIG",
-      "bands": "TBA"
+      "location": "KKeler, Berlin",
+      "bands": "Misere"
     },
     {
       "date": "23.2.2025",
       "location": "Fliese, Potsdam, Germany",
-      "bands": "TBA"
+      "bands": "ČudNoReĐe"
+    },
+    {
+      "date": "24.2.2025",
+      "location": "Bagehl, Rostock, Germany",
+      "bands": "ČudNoReĐe"
+    },
+    {
+      "date": "24.2.2025",
+      "location": "Private party, Leipzig, Germany",
+      "bands": "ČudNoReĐe"
+    },
+    {
+      "date": "26.2.2025",
+      "location": "Fischladen, Berlin, Germany",
+      "bands": "ČudNoReĐe"
+    },
+    {
+      "date": "27.2.2025",
+      "location": "Nordstadtbraut, Hanover, Germany",
+      "bands": "ČudNoReĐe"
+    },
+    {
+      "date": "28.2.2025",
+      "location": "Komet, Hamburg, Germany",
+      "bands": "Andro Dyson & The Untamed Tamers"
+    },
+    {
+      "date": "1.3.2025",
+      "location": "Kult41, Bonn, Germany",
+      "bands": "ČudNoReĐe"
+    },
+    {
+      "date": "2.3.2025",
+      "location": "Asgaard, Gent, Belgium",
+      "bands": "-"
+    },
+    {
+      "date": "3.3.2025",
+      "location": "Le Chaff, Bruxelles, Belgium",
+      "bands": "Koala Disco"
+    },
+    {
+      "date": "4.3.2025",
+      "location": "Mirador, Luxembourg, Luxembourg",
+      "bands": "ČudNoReĐe"
+    },
+    {
+      "date": "5.3.2025",
+      "location": "Esperanza, Schwäbisch Gmünd, Germany",
+      "bands": " ČudNoReĐe"
+    },
+    {
+      "date": "6.3.2025",
+      "location": "Reitschule, Bern, Switzerland",
+      "bands": "-"
+    },
+    {
+      "date": "7.3.2025",
+      "location": "Horst Klub, Kreuzlingen, Switzerland",
+      "bands": "ČudNoReĐe"
+    },
+    {
+      "date": "8.3.2025",
+      "location": "Kubo, Aarau, Switzerland",
+      "bands": "ČudNoReĐe"
+    },
+     {
+      "date": "12.3.2025",
+      "location": "Kreatzwek eV, Augsburg, Germany",
+      "bands": "ČudNoReĐe"
+    },
+     {
+      "date": "14.3.2025",
+      "location": "AKC Nama, Škofja Loka, Slovenia",
+      "bands": "ČudNoReĐe"
     }
   ]
 }
