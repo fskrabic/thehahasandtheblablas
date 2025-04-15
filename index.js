@@ -151,6 +151,16 @@ function loadConcerts(type, reverseOrder) {
       const tableBody = document.querySelector(`#${type}Gigs tbody`);
       let concerts = data.concerts;
 
+      if (concerts.length == 0) {
+        const row = document.createElement("tr");
+        const cell = document.createElement('td');
+        cell.innerHTML = `<img src="./assets/gifs/question.gif"></img><br><strong>no upcoming shows :( book us!</strong>`
+        cell.setAttribute('colspan',3);
+        cell.style.textAlign = 'center';
+        row.appendChild(cell);
+        tableBody.appendChild(row);
+      }
+
       if (reverseOrder) concerts.reverse();
 
       concerts.forEach((concert) => {
