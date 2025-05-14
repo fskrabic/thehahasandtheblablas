@@ -1,14 +1,5 @@
 {
   "concerts": [
-    {
-      "date": "9.5.2025.",
-      "location": "DKC Incel, Banja Luka, BiH",
-      "bands": "Inkel"
-    },
-    {
-      "date": "10.5.2025.",
-      "location": "OKC Abrašević, Mostar, BiH",
-      "bands": "Beatnici, Lopoč"
-    }
+    
   ]
 }
