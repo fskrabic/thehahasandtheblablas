@@ -1,197 +1,207 @@
-document.addEventListener("DOMContentLoaded", () => {
-  loadLyrics("./assets/lyrics/andy.txt");
-  setupTabs();
-  setupInteractiveTables();
-  setupContactForm();
-  loadConcerts("past", true);
-  loadConcerts("upcoming", false);
-  logVisits();
-  logVisitInfo();
-});
 
-function setupTabs() {
-  const tabs = document.querySelectorAll(".tab");
-  const tabContents = document.querySelectorAll(".tab-content");
+// const hoverContainer = document.querySelector(".hover-container");
+// const hoverImage = document.querySelector(".hover-image");
 
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", function (e) {
-      e.preventDefault();
+// class hahasApp {
+//   constructor() {
+//     this.init();
+//   }
+//   init() {
+//     hoverContainer.addEventListener("touchstart", () =>
+//       hoverImage.classList.add("active")
+//     );
+//     hoverContainer.addEventListener("touchend", () =>
+//       hoverImage.classList.remove("active")
+//     );
+//     loadLyrics("./assets/lyrics/andy.txt");
+//     setupTabs();
+//     setupInteractiveTables();
+//     setupContactForm();
+//     loadConcerts("past", true);
+//     loadConcerts("upcoming", false);
+//     logVisits();
+//     logVisitInfo();
+//   }
+// }
 
-      tabs.forEach((t) => t.setAttribute("aria-selected", "false"));
-      tabContents.forEach((content) => (content.style.display = "none"));
 
-      const target = this.getAttribute("data-tab");
-      document.getElementById(target).style.display = "block";
-      this.setAttribute("aria-selected", "true");
-    });
-  });
-}
+// function setupTabs() {
+//   const tabs = document.querySelectorAll(".tab");
+//   const tabContents = document.querySelectorAll(".tab-content");
 
-function setupInteractiveTables() {
-  document.querySelectorAll("table.interactive").forEach((table) => {
-    table.addEventListener("click", (event) => {
-      const row = event.target.closest("tr");
-      if (row) {
-        row.classList.toggle("highlighted");
-      }
-    });
-  });
-}
+//   tabs.forEach((tab) => {
+//     tab.addEventListener("click", function (e) {
+//       e.preventDefault();
 
-const hoverContainer = document.querySelector(".hover-container");
-const hoverImage = document.querySelector(".hover-image");
+//       tabs.forEach((t) => t.setAttribute("aria-selected", "false"));
+//       tabContents.forEach((content) => (content.style.display = "none"));
 
-hoverContainer.addEventListener("touchstart", () =>
-  hoverImage.classList.add("active")
-);
-hoverContainer.addEventListener("touchend", () =>
-  hoverImage.classList.remove("active")
-);
+//       const target = this.getAttribute("data-tab");
+//       document.getElementById(target).style.display = "block";
+//       this.setAttribute("aria-selected", "true");
+//     });
+//   });
+// }
 
-function changeVideo(videoID) {
-  const iframe = document.getElementById("videoFrame");
-  iframe.src = `https://www.youtube.com/embed/${videoID}`;
-}
+// function setupInteractiveTables() {
+//   document.querySelectorAll("table.interactive").forEach((table) => {
+//     table.addEventListener("click", (event) => {
+//       const row = event.target.closest("tr");
+//       if (row) {
+//         row.classList.toggle("highlighted");
+//       }
+//     });
+//   });
+// }
 
-function loadLyrics(fileName) {
-  const lyricsContainer = document.getElementById("lyricsContainer");
+// function changeVideo(videoID) {
+//   const iframe = document.getElementById("videoFrame");
+//   iframe.src = `https://www.youtube.com/embed/${videoID}`;
+// }
 
-  fetch(fileName)
-    .then((response) => response.text())
-    .then((data) => {
-      lyricsContainer.textContent = data;
-    })
-    .catch((error) => {
-      lyricsContainer.textContent = "Error loading lyrics. Please try again.";
-      console.error("Error fetching lyrics:", error);
-    });
+// function loadLyrics(fileName) {
+//   const lyricsContainer = document.getElementById("lyricsContainer");
 
-  document.querySelectorAll(".lyrics-buttons button").forEach((button) => {
-    button.classList.remove("active");
-  });
-  const activeButton = document.querySelector(
-    `button[onclick="loadLyrics('${fileName}')"]`
-  );
-  activeButton?.classList.add("active");
-}
+//   fetch(fileName)
+//     .then((response) => response.text())
+//     .then((data) => {
+//       lyricsContainer.textContent = data;
+//     })
+//     .catch((error) => {
+//       lyricsContainer.textContent = "Error loading lyrics. Please try again.";
+//       console.error("Error fetching lyrics:", error);
+//     });
 
-function setupContactForm() {
-  document
-    .getElementById("contactForm")
-    .addEventListener("submit", async function (event) {
-      event.preventDefault();
-      const formData = new FormData(this);
-      const formObject = Object.fromEntries(formData.entries());
+//   document.querySelectorAll(".lyrics-buttons button").forEach((button) => {
+//     button.classList.remove("active");
+//   });
+//   const activeButton = document.querySelector(
+//     `button[onclick="loadLyrics('${fileName}')"]`
+//   );
+//   activeButton?.classList.add("active");
+// }
 
-      try {
-        const response = await fetch("/api/send_mail", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formObject),
-        });
+// function setupContactForm() {
+//   document
+//     .getElementById("contactForm")
+//     .addEventListener("submit", async function (event) {
+//       event.preventDefault();
+//       const formData = new FormData(this);
+//       const formObject = Object.fromEntries(formData.entries());
 
-        const result = await response.json();
-        const messageElement = document.getElementById("responseMessage");
+//       try {
+//         const response = await fetch("/api/send_mail", {
+//           method: "POST",
+//           headers: {
+//             "Content-Type": "application/json",
+//           },
+//           body: JSON.stringify(formObject),
+//         });
 
-        if (response.ok) {
-          messageElement.textContent = "Your message was sent successfully!";
-          messageElement.style.color = "green";
-          this.reset();
-        } else {
-          messageElement.textContent = `Error: ${result.error}`;
-          messageElement.style.color = "red";
-        }
-      } catch (error) {
-        const messageElement = document.getElementById("responseMessage");
-        messageElement.textContent =
-          "An error occurred while sending the message.";
-        messageElement.style.color = "red";
-      }
-    });
-}
+//         const result = await response.json();
+//         const messageElement = document.getElementById("responseMessage");
 
-async function logVisits() {
-  try {
-    const response = await fetch("/api/visit-counter");
-    const data = await response.json();
-    document.getElementById(
-      "visit-count"
-    ).textContent = `you're the ${data.visits} visitor! congratz!`;
-  } catch (error) {
-    console.error("Error fetching visit count:", error);
-  }
-}
+//         if (response.ok) {
+//           messageElement.textContent = "Your message was sent successfully!";
+//           messageElement.style.color = "green";
+//           this.reset();
+//         } else {
+//           messageElement.textContent = `Error: ${result.error}`;
+//           messageElement.style.color = "red";
+//         }
+//       } catch (error) {
+//         const messageElement = document.getElementById("responseMessage");
+//         messageElement.textContent =
+//           "An error occurred while sending the message.";
+//         messageElement.style.color = "red";
+//       }
+//     });
+// }
 
-function logVisitInfo() {
-  const userAgent = navigator.userAgent;
-  const referrer = document.referrer;
-  const pagePath = window.location.pathname;
+// async function logVisits() {
+//   try {
+//     const response = await fetch("/api/visit-counter");
+//     const data = await response.json();
+//     document.getElementById(
+//       "visit-count"
+//     ).textContent = `you're the ${data.visits} visitor! congratz!`;
+//   } catch (error) {
+//     console.error("Error fetching visit count:", error);
+//   }
+// }
 
-  fetch("/api/log-visit", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      userAgent,
-      referrer,
-      pagePath,
-    }),
-  })
-    .then((response) => response.json())
-    .catch((error) => console.error("Error logging visit:", error));
-}
+// function logVisitInfo() {
+//   const userAgent = navigator.userAgent;
+//   const referrer = document.referrer;
+//   const pagePath = window.location.pathname;
 
-function loadConcerts(type, reverseOrder) {
-  fetch(`./assets/shows/${type}.json`)
-    .then((response) => response.json())
-    .then((data) => {
-      const tableBody = document.querySelector(`#${type}Gigs tbody`);
-      let concerts = data.concerts;
+//   fetch("/api/log-visit", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       userAgent,
+//       referrer,
+//       pagePath,
+//     }),
+//   })
+//     .then((response) => response.json())
+//     .catch((error) => console.error("Error logging visit:", error));
+// }
 
-      if (concerts.length == 0) {
-        const row = document.createElement("tr");
-        const cell = document.createElement('td');
-        cell.innerHTML = `<img src="./assets/gifs/question.gif"></img><br><strong>no upcoming shows :( book us!</strong>`
-        cell.setAttribute('colspan',3);
-        cell.style.textAlign = 'center';
-        row.appendChild(cell);
-        tableBody.appendChild(row);
-      }
+// function loadConcerts(type, reverseOrder) {
+//   fetch(`./assets/shows/${type}.json`)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       const tableBody = document.querySelector(`#${type}Gigs tbody`);
+//       let concerts = data.concerts;
 
-      if (reverseOrder) concerts.reverse();
+//       if (concerts.length == 0) {
+//         const row = document.createElement("tr");
+//         const cell = document.createElement('td');
+//         cell.innerHTML = `<img src="./assets/gifs/question.gif"></img><br><strong>no upcoming shows :( book us!</strong>`
+//         cell.setAttribute('colspan', 3);
+//         cell.style.textAlign = 'center';
+//         row.appendChild(cell);
+//         tableBody.appendChild(row);
+//       }
 
-      concerts.forEach((concert) => {
-        const row = document.createElement("tr");
+//       if (reverseOrder) concerts.reverse();
 
-        const dateCell = document.createElement("td");
-        dateCell.textContent = concert.date;
-        row.appendChild(dateCell);
+//       concerts.forEach((concert) => {
+//         const row = document.createElement("tr");
 
-        const locationCell = document.createElement("td");
-        locationCell.textContent = concert.location;
-        row.appendChild(locationCell);
+//         const dateCell = document.createElement("td");
+//         dateCell.textContent = concert.date;
+//         row.appendChild(dateCell);
 
-        const bandsCell = document.createElement("td");
-        bandsCell.textContent = concert.bands;
-        row.appendChild(bandsCell);
+//         const locationCell = document.createElement("td");
+//         locationCell.textContent = concert.location;
+//         row.appendChild(locationCell);
 
-        tableBody.appendChild(row);
-      });
-    })
-    .catch((error) => {
-      console.error(`Error loading the ${type} concerts:`, error);
-    });
-}
-function openCredits() {
-  const window = document.getElementById("credit-window");
-  window.style.visibility = "visible";
-  window.style.display = "block";
-}
-function hideCredits() {
-  console.log("hide");
-  const window = document.getElementById("credit-window");
-  window.style.visibility = "hidden";
-}
+//         const bandsCell = document.createElement("td");
+//         bandsCell.textContent = concert.bands;
+//         row.appendChild(bandsCell);
+
+//         tableBody.appendChild(row);
+//       });
+//     })
+//     .catch((error) => {
+//       console.error(`Error loading the ${type} concerts:`, error);
+//     });
+// }
+// function openCredits() {
+//   const window = document.getElementById("credit-window");
+//   window.style.visibility = "visible";
+//   window.style.display = "block";
+// }
+// function hideCredits() {
+//   console.log("hide");
+//   const window = document.getElementById("credit-window");
+//   window.style.visibility = "hidden";
+// }
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   new hahasApp();
+// });
