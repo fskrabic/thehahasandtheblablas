@@ -202,6 +202,6 @@ function logVisitInfo() {
 //   window.style.visibility = "hidden";
 // }
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   new hahasApp();
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  new hahasApp();
+});
