@@ -2,27 +2,27 @@
 // const hoverContainer = document.querySelector(".hover-container");
 // const hoverImage = document.querySelector(".hover-image");
 
-// class hahasApp {
-//   constructor() {
-//     this.init();
-//   }
-//   init() {
-//     hoverContainer.addEventListener("touchstart", () =>
-//       hoverImage.classList.add("active")
-//     );
-//     hoverContainer.addEventListener("touchend", () =>
-//       hoverImage.classList.remove("active")
-//     );
-//     loadLyrics("./assets/lyrics/andy.txt");
-//     setupTabs();
-//     setupInteractiveTables();
-//     setupContactForm();
-//     loadConcerts("past", true);
-//     loadConcerts("upcoming", false);
-//     logVisits();
-//     logVisitInfo();
-//   }
-// }
+class hahasApp {
+  constructor() {
+    this.init();
+  }
+  init() {
+    // hoverContainer.addEventListener("touchstart", () =>
+    //   hoverImage.classList.add("active")
+    // );
+    // hoverContainer.addEventListener("touchend", () =>
+    //   hoverImage.classList.remove("active")
+    // );
+    // loadLyrics("./assets/lyrics/andy.txt");
+    // setupTabs();
+    // setupInteractiveTables();
+    // setupContactForm();
+    // loadConcerts("past", true);
+    // loadConcerts("upcoming", false);
+    logVisits();
+    logVisitInfo();
+  }
+}
 
 
 // function setupTabs() {
@@ -118,37 +118,37 @@
 //     });
 // }
 
-// async function logVisits() {
-//   try {
-//     const response = await fetch("/api/visit-counter");
-//     const data = await response.json();
-//     document.getElementById(
-//       "visit-count"
-//     ).textContent = `you're the ${data.visits} visitor! congratz!`;
-//   } catch (error) {
-//     console.error("Error fetching visit count:", error);
-//   }
-// }
+async function logVisits() {
+  try {
+    const response = await fetch("/api/visit-counter");
+    const data = await response.json();
+    document.getElementById(
+      "visit-count"
+    ).textContent = `you're the ${data.visits} visitor! congratz!`;
+  } catch (error) {
+    console.error("Error fetching visit count:", error);
+  }
+}
 
-// function logVisitInfo() {
-//   const userAgent = navigator.userAgent;
-//   const referrer = document.referrer;
-//   const pagePath = window.location.pathname;
+function logVisitInfo() {
+  const userAgent = navigator.userAgent;
+  const referrer = document.referrer;
+  const pagePath = window.location.pathname;
 
-//   fetch("/api/log-visit", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({
-//       userAgent,
-//       referrer,
-//       pagePath,
-//     }),
-//   })
-//     .then((response) => response.json())
-//     .catch((error) => console.error("Error logging visit:", error));
-// }
+  fetch("/api/log-visit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      userAgent,
+      referrer,
+      pagePath,
+    }),
+  })
+    .then((response) => response.json())
+    .catch((error) => console.error("Error logging visit:", error));
+}
 
 // function loadConcerts(type, reverseOrder) {
 //   fetch(`./assets/shows/${type}.json`)
