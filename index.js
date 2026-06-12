@@ -1,29 +1,13 @@
-
-const hoverContainer = document.querySelector(".hover-container");
-const hoverImage = document.querySelector(".hover-image");
-
-class hahasApp {
-  constructor() {
-    this.init();
-  }
-  init() {
-    hoverContainer.addEventListener("touchstart", () =>
-      hoverImage.classList.add("active")
-    );
-    hoverContainer.addEventListener("touchend", () =>
-      hoverImage.classList.remove("active")
-    );
-    loadLyrics("./assets/lyrics/andy.txt");
-    setupTabs();
-    setupInteractiveTables();
-    setupContactForm();
-    loadConcerts("past", true);
-    loadConcerts("upcoming", false);
-    logVisits();
-    logVisitInfo();
-  }
-}
-
+document.addEventListener("DOMContentLoaded", () => {
+  loadLyrics("./assets/lyrics/andy.txt");
+  setupTabs();
+  setupInteractiveTables();
+  setupContactForm();
+  loadConcerts("past", true);
+  loadConcerts("upcoming", false);
+  logVisits();
+  logVisitInfo();
+});
 
 function setupTabs() {
   const tabs = document.querySelectorAll(".tab");
@@ -53,6 +37,16 @@ function setupInteractiveTables() {
     });
   });
 }
+
+const hoverContainer = document.querySelector(".hover-container");
+const hoverImage = document.querySelector(".hover-image");
+
+hoverContainer.addEventListener("touchstart", () =>
+  hoverImage.classList.add("active")
+);
+hoverContainer.addEventListener("touchend", () =>
+  hoverImage.classList.remove("active")
+);
 
 function changeVideo(videoID) {
   const iframe = document.getElementById("videoFrame");
@@ -161,7 +155,7 @@ function loadConcerts(type, reverseOrder) {
         const row = document.createElement("tr");
         const cell = document.createElement('td');
         cell.innerHTML = `<img src="./assets/gifs/question.gif"></img><br><strong>no upcoming shows :( book us!</strong>`
-        cell.setAttribute('colspan', 3);
+        cell.setAttribute('colspan',3);
         cell.style.textAlign = 'center';
         row.appendChild(cell);
         tableBody.appendChild(row);
@@ -201,7 +195,3 @@ function hideCredits() {
   const window = document.getElementById("credit-window");
   window.style.visibility = "hidden";
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  new hahasApp();
-});
